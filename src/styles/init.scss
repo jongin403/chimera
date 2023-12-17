@@ -1,0 +1,20 @@
+@import './reset.scss';
+@import './font.scss';
+
+div,
+section,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
