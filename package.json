@@ -9,7 +9,9 @@
     "lint": "next lint",
     "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prettier": "prettier --write .",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -23,6 +25,14 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.5",
+    "@storybook/addon-interactions": "^7.6.5",
+    "@storybook/addon-links": "^7.6.5",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.5",
+    "@storybook/nextjs": "^7.6.5",
+    "@storybook/react": "^7.6.5",
+    "@storybook/test": "^7.6.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -30,10 +40,12 @@
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
+    "storybook": "^7.6.5",
     "typescript": "^5"
   }
 }
