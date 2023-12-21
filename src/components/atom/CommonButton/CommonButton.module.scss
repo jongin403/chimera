@@ -1,5 +1,7 @@
 @import '@styles/variable.scss';
 
-.test1 {
+.commonButton {
+  border-radius: 8px;
   background-color: $white;
+  cursor: pointer;
 }
