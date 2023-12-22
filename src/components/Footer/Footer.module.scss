@@ -1,0 +1,14 @@
+@import '@styles/variable';
+
+.footer {
+  border-top: 1px solid #dde1e8;
+  min-height: 156px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerContent {
+  max-width: $desktop-width;
+  padding: $minimum-padding 0;
+}
