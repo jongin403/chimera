@@ -2,7 +2,9 @@
 
 import styles from './page.module.scss';
 import { useEffect, useState } from 'react';
-import useSpeechRecognition, { RecognitionProps } from '@hooks/recognition';
+import useSpeechRecognition, {
+  RecognitionProps,
+} from '@/hooks/useSpeechRecognition';
 
 const Page = () => {
   const { isSupport, script, startSpeech, stopSpeech } = useSpeechRecognition(
