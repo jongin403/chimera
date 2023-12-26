@@ -1,8 +1,15 @@
 .logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+.logoName {
+  font-size: 36px;
 }
