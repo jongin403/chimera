@@ -24,7 +24,7 @@ const Logo = ({ className }: LogoProps) => {
   return (
     <div className={cx(className, styles.logoWrap)}>
       <Chimera width={36} height={36}></Chimera>
-      <Typo className={cx(styles.logoName, notoSansKr.className)}>CHIMERA</Typo>
+      <Typo className={cx(styles.logoName, notoSansKr.className)}>Chimera</Typo>
     </div>
   );
 };
