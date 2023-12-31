@@ -8,9 +8,7 @@ type FloatingButtonProps = {
 
 const FloatingButton = ({ className }: FloatingButtonProps) => {
   return (
-    <div className={cx(styles.className, styles.floatingButton)}>
-      플로팅 버튼
-    </div>
+    <span className={cx(className, styles.floatingButton)}>플로팅 버튼</span>
   );
 };
 

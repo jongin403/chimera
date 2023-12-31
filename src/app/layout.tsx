@@ -6,7 +6,9 @@ import Footer from '@components/Footer';
 import styles from './layout.module.scss';
 import classNames from 'classnames/bind';
 import FloatingButton from '../components/FloatingButton';
-import BottomNavigation from '../components/BottomNavigation';
+import BottomNavigation, {
+  BottomNavigationBlank,
+} from '../components/BottomNavigation';
 
 const cx = classNames.bind(styles);
 
@@ -26,10 +28,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={cx(inter.className, styles.body)}>
         <Header />
-        <section>{children}</section>
+        <section className={styles.contentSection}>{children}</section>
         <Footer className={styles.footer} />
-        <FloatingButton className={styles.footer} />
-        <BottomNavigation className={styles.footer} />
+        <div className={styles.fixedBottom}>
+          <FloatingButton className={styles.floatingButton} />
+          <BottomNavigation className={styles.bottomNavigation} />
+        </div>
+        <BottomNavigationBlank />
       </body>
     </html>
   );

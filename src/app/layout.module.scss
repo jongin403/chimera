@@ -9,10 +9,19 @@
 }
 
 .footer {
-  background-color: $white;
-  padding: 1rem;
-  text-align: center;
+  //
+}
+
+.contentSection {
+  min-height: 100dvh;
+}
+
+.fixedBottom {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.floatingButton {
+  margin: 0 $min-gap $min-gap auto;
 }
