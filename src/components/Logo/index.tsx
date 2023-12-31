@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 const Logo = ({ className }: LogoProps) => {
   return (
     <div className={cx(className, styles.logoWrap)}>
-      <Chimera width={36} height={36}></Chimera>
+      <Chimera width={36} height={36} />
       <Typo className={cx(styles.logoName, notoSansKr.className)}>Chimera</Typo>
     </div>
   );

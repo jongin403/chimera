@@ -3,6 +3,12 @@ import { Inter } from 'next/font/google';
 import '@styles/globals.scss';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
+import styles from './layout.module.scss';
+import classNames from 'classnames/bind';
+import FloatingButton from '../components/FloatingButton';
+import BottomNavigation from '../components/BottomNavigation';
+
+const cx = classNames.bind(styles);
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,10 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cx(inter.className, styles.body)}>
         <Header />
         <section>{children}</section>
-        <Footer />
+        <Footer className={styles.footer} />
+        <FloatingButton className={styles.footer} />
+        <BottomNavigation className={styles.footer} />
       </body>
     </html>
   );
