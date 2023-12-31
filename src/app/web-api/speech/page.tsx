@@ -25,9 +25,9 @@ const Page = () => {
           script={script}
           startSpeech={startSpeech}
           stopSpeech={stopSpeech}
-        ></Support>
+        />
       )}
-      {!isSupport && <NoSupport></NoSupport>}
+      {!isSupport && <NoSupport />}
     </div>
   );
 };

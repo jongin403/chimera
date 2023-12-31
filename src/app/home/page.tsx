@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       홈 페이지 입니다.
-      <SiteMap></SiteMap>
+      <SiteMap />
     </div>
   );
 };

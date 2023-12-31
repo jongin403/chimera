@@ -4,7 +4,7 @@ import Accordion from '@components/Accordion';
 const Page = () => {
   return (
     <div className={styles.page}>
-      <Accordion></Accordion>
+      <Accordion />
     </div>
   );
 };

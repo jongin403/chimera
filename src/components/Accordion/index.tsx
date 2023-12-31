@@ -31,7 +31,7 @@ const Accordion = () => {
       <div className={styles.header} onClick={toggleAccordion}>
         <h3 className={styles.title}>Question</h3>
         <div className={cx(styles.chevron, isOpen && styles.rotate)}>
-          <i className={styles['fa fa-chevron-down']}></i>
+          <i className={styles['fa fa-chevron-down']} />
         </div>
       </div>
       <div ref={ref} className={cx(styles.content, isOpen && styles.isOpen)}>
