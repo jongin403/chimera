@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 const Page = () => {
   return (
     <div className={styles.page}>
-      <p>TODO: 전체 메뉴를 보여주고, 클릭시 이동할 수 있는 사이트맵</p>
+      <p>TODO: 유형별 carousel UI 를 보여주는 페이지</p>
     </div>
   );
 };
