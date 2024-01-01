@@ -3,6 +3,7 @@
 import { HouseSolid } from '../../icons/house-solid';
 import { MagnifyingGlassSolid } from '../../icons/magnifying-glass-solid';
 import { SitemapSolid } from '../../icons/sitemap-solid';
+import { UserSolid } from '../../icons/user-solid';
 import Typo from '../atom/Typo';
 import styles from './BottomNavigation.module.scss';
 import classNames from 'classnames/bind';
@@ -12,7 +13,7 @@ const cx = classNames.bind(styles);
 
 export type BottomNavigationProps = {
   className?: string;
-  activeTabMenu?: '홈' | '사이트맵' | '검색' | undefined;
+  activeTabMenu?: '홈' | '사이트맵' | '검색' | '마이페이지' | undefined;
 };
 
 type MenuListProps = {
@@ -26,12 +27,16 @@ const menuList: MenuListProps[] = [
     path: '/home',
   },
   {
+    name: '검색',
+    path: '/search',
+  },
+  {
     name: '사이트맵',
     path: '/sitemap',
   },
   {
-    name: '검색',
-    path: '/search',
+    name: '마이페이지',
+    path: '/mypage',
   },
 ];
 
@@ -93,8 +98,9 @@ const MenuIcon = ({
   return (
     <>
       {name === '홈' && <HouseSolid {...menuIconProps} />}
-      {name === '사이트맵' && <SitemapSolid {...menuIconProps} />}
       {name === '검색' && <MagnifyingGlassSolid {...menuIconProps} />}
+      {name === '사이트맵' && <SitemapSolid {...menuIconProps} />}
+      {name === '마이페이지' && <UserSolid {...menuIconProps} />}
     </>
   );
 };
