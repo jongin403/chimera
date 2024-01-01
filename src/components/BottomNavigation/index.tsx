@@ -6,37 +6,53 @@ import { SitemapSolid } from '../../icons/sitemap-solid';
 import Typo from '../atom/Typo';
 import styles from './BottomNavigation.module.scss';
 import classNames from 'classnames/bind';
+import { usePathname, useRouter } from 'next/navigation';
 
 const cx = classNames.bind(styles);
 
 export type BottomNavigationProps = {
   className?: string;
   activeTabMenu?: '홈' | '사이트맵' | '검색' | undefined;
-  handleClickTabMenu?: (menuName: string) => void;
 };
 
-const menuList = ['홈', '사이트맵', '검색'];
+type MenuListProps = {
+  name: string;
+  path: string;
+};
 
-const BottomNavigation = ({
-  className,
-  activeTabMenu,
-  handleClickTabMenu,
-}: BottomNavigationProps) => {
+const menuList: MenuListProps[] = [
+  {
+    name: '홈',
+    path: '/home',
+  },
+  {
+    name: '사이트맵',
+    path: '/sitemap',
+  },
+  {
+    name: '검색',
+    path: '/search',
+  },
+];
+
+const BottomNavigation = ({ className }: BottomNavigationProps) => {
+  const router = useRouter();
+  const handleClickTabMenu = (path: string) => {
+    router.push(path);
+  };
+  const currentRoute = usePathname();
+
   return (
     <div className={cx(className, styles.bottomNavigation)}>
       <div className={styles.itemList}>
-        {menuList.map((itemName, index) => {
+        {menuList.map((item, index) => {
+          const isActive = currentRoute === item.path;
           return (
             <button
               key={index}
-              className={cx(
-                'itemButton',
-                itemName === activeTabMenu ? 'active' : 'inactive',
-              )}
+              className={cx('itemButton', { active: isActive })}
               onClick={() => {
-                if (handleClickTabMenu) {
-                  handleClickTabMenu(itemName);
-                }
+                handleClickTabMenu(item.path);
               }}
             >
               <MenuIcon
@@ -45,11 +61,11 @@ const BottomNavigation = ({
                   width: 24,
                   height: 24,
                 }}
-                name={itemName}
-                isActive={false}
+                name={item.name}
+                isActive={isActive}
               />
-              <div className={styles.itemNameWrap}>
-                <Typo>{itemName}</Typo>
+              <div className={styles.itemWrap}>
+                <Typo>{item.name}</Typo>
               </div>
             </button>
           );
