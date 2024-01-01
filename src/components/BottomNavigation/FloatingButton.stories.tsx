@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Footer from '.';
+import BottomNavigation from '.';
 
 const meta = {
-  title: 'Example/Footer',
-  component: Footer,
+  title: 'Example/BottomNavigation',
+  component: BottomNavigation,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Footer>;
+} satisfies Meta<typeof BottomNavigation>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -9,5 +9,5 @@
   "trailing-spaces.trimOnSave": false,
   "prettier.singleQuote": true,
   "prettier.endOfLine": "auto",
-  "cSpell.words": []
+  "cSpell.words": ["textnodes"]
 }

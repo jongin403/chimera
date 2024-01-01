@@ -1,4 +1,3 @@
-import { Chimera } from '@icons/Chimera';
 import styles from './Logo.module.scss';
 import classNames from 'classnames/bind';
 import Typo from '../atom/Typo';
@@ -11,7 +10,7 @@ export type LogoProps = {
 };
 
 const notoSansKr = Noto_Sans_KR({
-  weight: ['700'],
+  weight: ['900'],
   subsets: ['latin'],
 });
 
@@ -23,7 +22,6 @@ const montserrat = Montserrat({
 const Logo = ({ className }: LogoProps) => {
   return (
     <div className={cx(className, styles.logoWrap)}>
-      <Chimera width={36} height={36} />
       <Typo className={cx(styles.logoName, notoSansKr.className)}>Chimera</Typo>
     </div>
   );
