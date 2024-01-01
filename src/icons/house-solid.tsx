@@ -12,7 +12,7 @@ export const HouseSolid: React.FC<IconProps> = ({
       width={width}
       viewBox="0 0 576 512"
     >
-      /*Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
+      /*!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
       License - https://fontawesome.com/license/free Copyright 2024 Fonticons,
       Inc.*/
       <path

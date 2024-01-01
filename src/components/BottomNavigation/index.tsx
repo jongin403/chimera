@@ -2,6 +2,7 @@
 
 import { HouseSolid } from '../../icons/house-solid';
 import { MagnifyingGlassSolid } from '../../icons/magnifying-glass-solid';
+import { SitemapSolid } from '../../icons/sitemap-solid';
 import Typo from '../atom/Typo';
 import styles from './BottomNavigation.module.scss';
 import classNames from 'classnames/bind';
@@ -10,11 +11,11 @@ const cx = classNames.bind(styles);
 
 export type BottomNavigationProps = {
   className?: string;
-  activeTabMenu?: '홈' | '검색' | undefined;
+  activeTabMenu?: '홈' | '사이트맵' | '검색' | undefined;
   handleClickTabMenu?: (menuName: string) => void;
 };
 
-const menuList = ['홈', '검색'];
+const menuList = ['홈', '사이트맵', '검색'];
 
 const BottomNavigation = ({
   className,
@@ -76,6 +77,7 @@ const MenuIcon = ({
   return (
     <>
       {name === '홈' && <HouseSolid {...menuIconProps} />}
+      {name === '사이트맵' && <SitemapSolid {...menuIconProps} />}
       {name === '검색' && <MagnifyingGlassSolid {...menuIconProps} />}
     </>
   );
