@@ -9,5 +9,12 @@
   "trailing-spaces.trimOnSave": false,
   "prettier.singleQuote": true,
   "prettier.endOfLine": "auto",
-  "cSpell.words": ["textnodes", "zustand", "fontawesome", "Fonticons", "mypage"]
+  "cSpell.words": [
+    "textnodes",
+    "zustand",
+    "fontawesome",
+    "Fonticons",
+    "mypage",
+    "geolocation"
+  ]
 }
